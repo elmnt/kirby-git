@@ -13,6 +13,10 @@ Icon
 /site/cache/*
 !/site/cache/index.html
 
+# node_modules
+# ------------
+/node_modules
+
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
