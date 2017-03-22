@@ -36,9 +36,10 @@ var src_js     = 'src/js/',
 
 gulp.task('serve', ['compileSass'], function() {
 
+    // using MAMP to run the PHP server
     bsrSync.init({
-        //proxy: 'localhost:8000',
-        //notify: false
+        proxy: 'kirby-git:8888',
+        notify: false
     });
 
     // Watch files during local development

@@ -1,10 +1,11 @@
 # kirby-git
 
-Reworking another starting point for Kirby CMS projects, more in line with this method:  
+Another starting point for Kirby CMS projects.  
+
+Reference:  
 
 https://getkirby.com/docs/cookbook/working-with-git  
 
-This is not a usable project yet, just testing some options, before I update my kirby-starter project.  
+In this instance, /kirby and /panel are submobules, for easier updating.
 
-
-
+This is not a usable project yet. Still setting up my source files. Just testing some options, before I update my kirby-starter project.  
