@@ -1,18 +1,18 @@
 @charset "UTF-8";
 /*
   # Kirby Starterkit
-  
+
   This CSS file handles all of the styling in of Kirby’s
   Starterkit. Feel free to tinker around with it and
-  adjust it according to your needs.  
-  
+  adjust it according to your needs.
+
   ## Color Definitions
-  
+
   The following colors used in the Starterkit. If you want
   to use this CSS file as a starting point for your own
   project, you can do a simple search & replace to adjust
   the color scheme to your needs.
-  
+
   - Background:            #fffff8
   - Text:                  #261e66
   - Hovered Links:         #560bed
@@ -30,34 +30,34 @@
   - Menu Separator,
     <hr> in text:          #a8a5be
   - Blockquote BG:         #fffffd
-  
+
   ## Table of Contents
-  
+
   1 Global Rules & Definitions
   1.1 Font Definitions
   1.2 Reset & Normalization
   1.3 General Typography
   1.4 Images & Figures
-  
+
   2 Layout Helpers & Reusable Components
   2.1 Kirbytext
   2.2 Button
   2.3 Grid & Layout
   2.4 Pagination
   2.5 Projects Showcase
-  
+
   3 Site Layout
   3.1 Header
   3.2 Menu
   3.3 Sticky Footer
   3.4 Main Content
-  
+
   4 Template-specific Components
   4.1 Homepage
   4.2 Blog Article
   4.3 Team
   4.4 Contact
-  
+
 */
 
 /* =====  1 Global Rules & Definitions  ===================================== */
@@ -746,7 +746,7 @@ body {
 }
 
 .footer .heart {
-  /* The heart character of Arial Unicode MS looks just 
+  /* The heart character of Arial Unicode MS looks just
      surprisingly nice … */
   font-family: "Arial Unicode MS", Arial, sans-serif;
   display: inline-block;
