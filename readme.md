@@ -10,4 +10,7 @@ In this instance, /kirby and /panel are submobules, for easier updating. I added
 
 `k-update`  
 
-This is not a usable project yet. Still setting up my source files. Just testing some options. Eventually, I plan to replace my kirby-starter project.  
+That just auto-completes `./update.sh` which I could just as easily type, to execute the script, but my snippet is simpler and more intuitive for me.
+
+I plan to replace my kirby-starter project, once I've included my personal CSS framework. The latest version of the core Kirby CSS is included now, which, it's worth saying, the Kirby team have done a really nice job with. It's already a great starting point.  
+
