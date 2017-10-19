@@ -1,12 +1,10 @@
 # System files
 # ------------
-
 Icon
 .DS_Store
 
 # Temporary files
 # ---------------
-
 /thumbs/*
 !/thumbs/index.html
 
@@ -23,12 +21,14 @@ Icon
 
 # Kirby accounts
 # ---------------
-
 /site/accounts/*
 !/site/accounts/index.html
 
 # Avatars
 # ---------------
-
 /assets/avatars/*
 !/assets/avatars/index.html
+
+# .vscode
+# ---------------
+/.vscode
