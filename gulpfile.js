@@ -86,6 +86,19 @@ gulp.task('compileSass', function() {
         .pipe(bsrSync.stream());
 });
 
+
+// gulp.task('sass', function () {
+//     return gulp.src('./sass/**/*.scss')
+//       .pipe(sass().on('error', sass.logError))
+//       .pipe(gulp.dest('./css'));
+//   });
+//   
+//   gulp.task('sass:watch', function () {
+//     gulp.watch('./sass/**/*.scss', ['sass']);
+//   });
+
+
+
 // ----------- Cleanup
 
 gulp.task('clean', function(callback) {
