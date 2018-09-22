@@ -55,10 +55,12 @@ gulp.task('serve', ['compileSass'], function() {
 
 gulp.task('concatScripts', function() {
     return gulp.src([
+            /*
             src_js + 'jquery-2.1.4.min.js',
             src_js + 'elmenu.js',
             src_js + 'picturefill.min.js',
             src_js + 'jquery.easing.1.3.js',
+            */
             src_js + 'main.js'
         ])
         .pipe(concat('app.js'))
