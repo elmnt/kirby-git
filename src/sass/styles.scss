@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+/**
+ * Import my customizations of the tachyons base variables
+ * (The tachyons _variables partial is no longer included in the build)
+ */
+@import 'tachyvars';
+@import '../../node_modules/tachyons-sass/tachyons';
+
+/**
+ * Tachyons debugging
+ */
+// @import '../../node_modules/tachyons-sass/scss/debug-children';
+// @import '../../node_modules/tachyons-sass/scss/debug-grid';
+// @import '../../node_modules/tachyons-sass/scss/debug';
+
+/**
+ * Custom partials
+ */
+@import 'vars';
+@import 'mixins';
+@import 'base';
+@import 'fonts';
+@import 'grid';
+@import 'custom';
+@import 'vendor';

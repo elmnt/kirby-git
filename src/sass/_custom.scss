@@ -1,0 +1,154 @@
+/**
+ * Custom styles on top of Tachyons
+ */
+
+mark.light {
+    background-color: lightblue;
+}
+
+// link colors
+p a,
+li a,
+td a {
+    color: $link-color;
+    &:visited {
+        color: $link-color-visited;
+    }
+    &:hover,
+    &:active {
+        color: $link-color-hover;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+article header h2 a {
+    color: $article-link-color;
+    &:visited {
+        color: $article-visited-color;
+    }
+    &:hover,
+    &:active {
+        color: $article-hover-color;
+    }
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    padding-bottom: 2px;
+}
+
+// custom page background colors
+.split-bg-home {
+    @include pagebg($bghome-left, $bghome-right);
+}
+
+.split-bg-blog {
+    @include pagebg($bgblog-left, $bgblog-right);
+}
+
+.split-bg-work {
+    @include pagebg($bgwork-left, $bgwork-right);
+}
+
+.split-bg-bio {
+    @include pagebg($bgbio-left, $bgbio-right);
+}
+
+// header
+.logo {
+    width: 100%;
+    max-width: 130px;
+    min-width: 130px;
+}
+
+// header nav
+.transition-transform {
+    -webkit-transition: transform $menu-timing $menu-trans;
+    transition: transform $menu-timing $menu-trans;
+}
+
+.transform-off {
+    transform: translate3d( 100%, 0, 0);
+}
+
+@media screen and (min-width: 60em) {
+    .transform-off {
+        transform: none;
+    }
+}
+
+.hb {
+    width: 100%;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+// captions
+figcaption {
+    @extend .pa3;
+    @extend .f7;
+    // @extend .gray;
+    background-color: #333;
+    color: #ccc;
+}
+
+img {
+    display: block;
+}
+
+// icons
+.icon--cloud {
+    background-image: url('/assets/svg/cloud-download.svg');
+    padding-left: 38px;
+    line-height: 32px;
+    background-repeat: no-repeat;
+    background-position-y: -3px;
+}
+
+// resume sidebar content
+.resume-content p:nth-of-type(2) {
+    margin-bottom: .25rem;
+}
+
+footer {
+    font-size: 80%;
+}
+
+ul,
+ol {
+    //@extend .list;
+    line-height: 1.5;
+}
+
+/*
+.case-study-img {
+    border-bottom: 1px solid #ddd;
+    max-width: 600px;
+}
+*/
+
+figure img {
+    //display: inline-block;
+}
+
+p code {
+    // color: magenta;
+    color: black;
+    font-weight: bold;
+    font-weight: 700;
+}
+
+.bioimg {
+    width: 100%;
+    max-width: 480px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin-right: auto;
+    margin-left: auto;
+}

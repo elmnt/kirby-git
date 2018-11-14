@@ -1,0 +1,70 @@
+/**
+ * Variables
+ */
+
+ // grid
+
+$wrap-max-width:   1200px;
+$wrap-min-width:   300px;
+$grid-content-min: 300px;
+$grid-content-max: 740px;
+$wrap-clients-max: 800px;
+
+// media queries
+
+$mq-small:  300px;
+$mq-medium: 700px;
+$mq-large:  1200px;
+$mq-xl:     1600px;
+
+// animation timing
+
+$menu-timing: 0.5s;
+$menu-trans:  cubic-bezier(0.785, 0.135, 0.15, 0.86);
+// resource: easings.net
+
+
+// custom page background colors
+
+$bghome-left:  #f1ffff;
+$bghome-right: #eaf7f7;
+$bgblog-left:  #faf6e5;
+$bgblog-right: #f3efdf;
+$bgwork-left:  #f0f0f0;
+$bgwork-right: #e9e9e9;
+$bgbio-left:   #fdf6ea;
+$bgbio-right:  #f5efe3;
+
+// links
+
+//$link-color: #FF4136;
+$link-color:         red;
+$link-color-hover:   violet;
+$link-color-visited: red;
+
+$article-link-color:  black;
+$article-hover-color:   lighten($article-link-color, 20%);
+$article-visited-color: lighten($article-link-color, 60%);
+
+// fonts (base 16)
+
+$font-size-sm: 112.5%;
+$font-size-md: 137.5%;
+$font-size-lg: 150%;
+
+/*
+$font-size-sm: 112.5%;
+$font-size-md: 125%;
+$font-size-lg: 137.5%;
+*/
+
+$body-font-color:   #555;
+$header-font-color: #333;
+
+// Google fonts
+
+$sans-serif: 'Lato',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+$serif:      'Abril Fatface',georgia,serif;
+
+// font-family: 'Lato' 'IBM Plex Mono'
+// $sans-serif: Consolas, monaco, monospace;

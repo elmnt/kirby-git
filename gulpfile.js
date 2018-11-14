@@ -99,7 +99,7 @@ gulp.task('minifyScripts', ['concatScripts'], function() {
 // ----------- Compile Sass
 
 gulp.task('compileSass', function() {
-    return gulp.src('src/sass/main.scss')
+    return gulp.src('src/sass/styles.scss')
         .pipe(maps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename('styles.min.css'))

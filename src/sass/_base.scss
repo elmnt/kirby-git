@@ -1,0 +1,13 @@
+/**
+ * Base (global cascade styles)
+ */
+
+html {
+    font-size: $font-size-sm;
+    @media only screen and (min-width: 600px) and (max-width: 1000px) {
+        font-size: $font-size-md;
+    }
+    @media only screen and (min-width: 1000px) {
+        font-size: $font-size-lg;
+    }
+}

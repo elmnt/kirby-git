@@ -1,0 +1,10 @@
+/**
+ * Global Mixins
+ */
+
+@mixin pagebg($left-color, $right-color) {
+    background-color: $right-color;
+    background-image: -webkit-linear-gradient(150deg, $right-color 45%, $left-color 45%);
+    height: 100% !important;
+    min-height: 100% !important;
+}

@@ -1,0 +1,121 @@
+/**
+ * CSS Grid (woot)
+ */
+
+// outer wrapper to maintain a single max-width
+.wrap {
+    width: 100%;
+    max-width: $wrap-max-width;
+    min-width: $wrap-min-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// alternate setting for client logo display on home page
+.wrap--clients {
+    @extend .wrap;
+    max-width: $wrap-clients-max;
+}
+
+// css grid containers
+.grid--content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1rem minmax($grid-content-min, $grid-content-max) 1rem 1fr 1fr;
+}
+
+.grid--content>* {
+    grid-column: 4;
+}
+
+.grid--content>p {
+    @extend .lh-copy;
+}
+
+// full width images (including images in blog articles)
+.grid--content>figure {
+    grid-column: 1 / -1;
+    margin: 1em auto;
+}
+
+// mid-size images
+.grid--content>figure.mid {
+    grid-column: 2 / -2;
+    margin: 1em auto;
+}
+
+// css grid portfolio item display
+.grid--portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    @media only screen and (min-width: $mq-medium) and (max-width: $mq-large) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (min-width: $mq-large) and (max-width: $mq-xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (min-width: $mq-xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box {
+        padding: 1em;
+    }
+}
+
+// css grid client logos display
+.grid--clients {
+    //border: 1px solid pink;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    @media only screen and (min-width: $mq-medium) and (max-width: $mq-large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (min-width: $mq-large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box {
+        padding: 0;
+    }
+}
+
+// standard sidebar / content grid
+.grid--sidebar {
+    max-width: 1200px;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media only screen and (min-width: 800px) {
+        grid-template-columns: 4fr 8fr;
+        grid-gap: 2em;
+    }
+    //.box {}
+}
+
+// standard 50/50 split grid
+.grid--split {
+    max-width: 740px;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .box {
+        padding: 1rem;
+    }
+
+    @media only screen and (min-width: 900px) {
+        max-width: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+
+}
