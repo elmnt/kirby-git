@@ -11,6 +11,8 @@ var gulp = require('gulp'),
     maps = require('gulp-sourcemaps'),
     cache = require('gulp-cache'),
     del = require('del'),
+    connect = require('gulp-connect-php'),
+    babel = require('gulp-babel'),
     runseq = require('run-sequence');
 
 // ----------- Variables
@@ -30,21 +32,31 @@ var kc = 'content/**/*.txt';
 // src assets
 var src_js = 'src/js/',
     src_js_all = 'src/js/*',
-    src_s = 'src/stringer/**/*.scss';
+    src_s = 'src/sass/*';
 
-// ----------- Static Server & Watch Files
+// ----------- PHP Server & Watch Files
 
 gulp.task('serve', ['compileSass'], function() {
 
-    // using MAMP to run the PHP server
+    // start the gulp-connect-php server
+    connect.server({
+        root: './',
+        livereload: true
+    });
+
+    // browser-sync
     bsrSync.init({
-        proxy: 'kirby-git:8888',
+        proxy: '127.0.0.1:8000',
         notify: false
     });
 
     // Watch files during local development
     gulp.watch(src_s, ['compileSass']);
     gulp.watch(src_js_all, ['minifyScripts']);
+
+    gulp.watch(src_s).on('change', bsrSync.reload);
+    gulp.watch(src_js_all).on('change', bsrSync.reload);
+
     gulp.watch(ks_s).on('change', bsrSync.reload);
     gulp.watch(ks_t).on('change', bsrSync.reload);
     gulp.watch(kc).on('change', bsrSync.reload);
@@ -55,13 +67,8 @@ gulp.task('serve', ['compileSass'], function() {
 
 gulp.task('concatScripts', function() {
     return gulp.src([
-            /*
-            src_js + 'jquery-2.1.4.min.js',
-            src_js + 'elmenu.js',
-            src_js + 'picturefill.min.js',
-            src_js + 'jquery.easing.1.3.js',
-            */
-            src_js + 'main.js'
+            src_js + 'main.js',
+            src_js + 'prism.js'
         ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest(src_js));
@@ -69,9 +76,22 @@ gulp.task('concatScripts', function() {
 
 gulp.task('minifyScripts', ['concatScripts'], function() {
     return gulp.src(src_js + 'app.js')
-        .pipe(maps.init())
-        .pipe(uglify())
-        .pipe(rename('app.min.js'))
+
+    .pipe(maps.init())
+
+    .pipe(babel({
+        presets: ['env']
+    }))
+
+    .pipe(uglify())
+
+    /* for debugging
+    .pipe(uglify().on('error', function(e){
+      console.log(e);
+    }))
+    */
+
+    .pipe(rename('app.min.js'))
         .pipe(maps.write('./'))
         .pipe(gulp.dest(ka_j));
 });
@@ -79,7 +99,7 @@ gulp.task('minifyScripts', ['concatScripts'], function() {
 // ----------- Compile Sass
 
 gulp.task('compileSass', function() {
-    return gulp.src('src/stringer/styles.scss')
+    return gulp.src('src/sass/main.scss')
         .pipe(maps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename('styles.min.css'))
@@ -87,19 +107,6 @@ gulp.task('compileSass', function() {
         .pipe(gulp.dest(ka_c))
         .pipe(bsrSync.stream());
 });
-
-
-// gulp.task('sass', function () {
-//     return gulp.src('./sass/**/*.scss')
-//       .pipe(sass().on('error', sass.logError))
-//       .pipe(gulp.dest('./css'));
-//   });
-//   
-//   gulp.task('sass:watch', function () {
-//     gulp.watch('./sass/**/*.scss', ['sass']);
-//   });
-
-
 
 // ----------- Cleanup
 

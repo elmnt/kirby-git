@@ -1,31 +1,36 @@
 {
-    "name": "kirby-git",
-    "version": "1.0.0",
-    "description": "Another starting point for Kirby CMS projects.",
-    "main": "gulpfile.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/elmnt/kirby-git.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/elmnt/kirby-git/issues"
-    },
-    "homepage": "https://github.com/elmnt/kirby-git#readme",
-    "devDependencies": {
-        "browser-sync": "^2.18.13",
-        "del": "^3.0.0",
-        "gulp": "^3.9.1",
-        "gulp-cache": "^0.4.6",
-        "gulp-concat": "^2.6.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^4.0.1",
-        "gulp-sourcemaps": "^2.6.0",
-        "gulp-uglify": "^3.0.0",
-        "run-sequence": "^2.1.0"
-    }
+  "name": "kirby-git",
+  "version": "1.0.0",
+  "description": "Another starting point for Kirby CMS projects.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmnt/kirby-git.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmnt/kirby-git/issues"
+  },
+  "homepage": "https://github.com/elmnt/kirby-git#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "tachyons-sass": "^4.9.3"
+  }
 }
